@@ -1,5 +1,6 @@
 // variabili globali
 const container = document.getElementById("container");
+const arrow = document.querySelector('.arrow');
 let positionListImg = 0
 
 // creare array con immagini
@@ -10,7 +11,12 @@ for (i = 0; i < listImg.length; i++){
     const square = document.createElement("div");
     container.append(square);
     square.classList.add("item")
-    square.innerHTML = `<img src="img/${listImg[positionListImg++]}">`;
+    square.innerHTML = `<img src="img/${listImg[positionListImg++]}"><div class="arrow"></div>`;
 }
-console.log(listImg[0])
-console.log(positionListImg)
+
+arrow.addEventListener("click",
+    function (){
+        console.log("ciao")
+    }
+)
+
