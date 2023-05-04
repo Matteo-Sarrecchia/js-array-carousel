@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item{
+    width: 500px;
+    margin: auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+.active{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
