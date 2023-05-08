@@ -5,17 +5,21 @@
 }
 
 #container{
-    margin-top: 70px;
+    margin: 80px;
 }
 
 .item{
     width: 500px;
+    height: 500px;
     margin: auto;
-    position: relative;
+    display: none;
+    text-align: center;
 }
 
 img{
     max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
 .active{
@@ -26,12 +30,23 @@ img{
     display: none;
 }
 
-.arrow{
-    background-color: orange;
+.arrowNext, .arrowPrev{
+    background-color: rgba(0, 0, 0, 0.5);
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.arrowNext{
     position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
+    left: 50%;
+    bottom: 170px;    
+}
+
+.arrowPrev{
+    position: absolute;
+    left: 50%;
+    top: 100px;
+
 }
