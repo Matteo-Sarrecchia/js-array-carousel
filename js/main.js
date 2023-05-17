@@ -1,6 +1,6 @@
 // variabili globali
 const container = document.getElementById("container");
-let arrowNext = document.querySelector('.arrowNext');
+let arrowNext = document.querySelector(".arrowNext");
 let arrowPrev = document.querySelector(".arrowPrev")
 let square;
 
@@ -35,22 +35,22 @@ arrowNext.addEventListener("click",
     
     function(){
 
-        if(positionItem < listImg.length -1){
+        if(positionItem <= listImg.length - 1){
 
             // tolgo la classe active al primo elemento
-        item[positionItem].classList.remove("active");
-       
-        // passo all'elemento successivo
-        positionItem++
+            item[positionItem].classList.remove("active");
         
-        // aggiungo la classe active all'elemento successivo
-        item[positionItem].classList.add("active");
-
-        // se sono all'ultimo elemento
-        if (positionItem === listImg.length -1){
-           arrowNext.classList.add("hidden");
-        }
-        }     
+            // se sono all'ultimo elemento
+            if (positionItem === listImg.length - 1){
+                positionItem = 0
+            } else {
+                // passo all'elemento successivo
+                positionItem++
+            }
+    
+            // aggiungo la classe active all'elemento successivo
+            item[positionItem].classList.add("active");
+        }       
     }
 )
 
@@ -58,22 +58,23 @@ arrowPrev.addEventListener("click",
 
     function(){
 
-        if(positionItem < listImg.length -1){
+        if(positionItem <= listImg.length -1){
 
             // tolgo la classe active al primo elemento
-        item[positionItem].classList.remove("active");
-        
-        // passo all'elemento successivo
-        positionItem--
-        
-        // aggiungo la classe active all'elemento successivo
-        item[positionItem].classList.add("active");
-
-        // se sono all'ultimo elemento
-        if (positionItem === 0){
-            arrowPrev.classList.add("hidden");
-        }
-        }     
+            item[positionItem].classList.remove("active");
+            
+            // se sono all'ultimo elemento
+            if (positionItem === 0){
+                positionItem = 4
+            }else {
+                // passo all'elemento successivo
+                positionItem--
+            }
+            
+            // aggiungo la classe active all'elemento successivo
+            item[positionItem].classList.add("active");
+        } 
+     
     }
     
 )
